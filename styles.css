@@ -175,3 +175,15 @@ main,.page{width:100%;min-width:0}
  .actions{flex-direction:column;align-items:stretch}
  .actions .button{width:100%}
 }
+
+/* FAQ: mantém os itens estáveis ao abrir e fechar em telas estreitas. */
+.faq-grid{align-items:start;grid-auto-rows:auto}
+.faq details{min-width:0;align-self:start;padding:0;overflow:hidden;border:1px solid #ead4e5;transition:background-color .2s,border-color .2s}
+.faq details[open]{background:#fff8f4;border-color:#d9afd1}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:16px;list-style:none;line-height:1.45;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::marker{content:""}
+.faq summary::after{content:"+";flex:0 0 24px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#ead4e5;color:var(--plum);font-size:18px;font-weight:500;line-height:1;transition:transform .2s,background-color .2s}
+.faq details[open] summary::after{content:"−";background:#e7c7df}
+.faq summary:focus-visible{outline:2px solid #9b5596;outline-offset:-3px;border-radius:11px}
+.faq details p{margin:0;padding:0 16px 16px;line-height:1.65}
